@@ -24,4 +24,4 @@ assert i1 isNot ClosureProcedure
 
 ### Note
 
-* Although this is possible to be used with compilers after 2.0.0, it is not recommended to do so. And `proc {.closure.}` should be used instead.
+* Although this is possible to be used with compilers after 2.0.0, doing so is not recommended, and `proc {.closure.}` should be used instead.
