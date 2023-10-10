@@ -20,4 +20,3 @@ check:
   v1 isNot SomeClosure
   v1 isNot ClosureProcedure
   v1 isNot ClosureIterator
-  
