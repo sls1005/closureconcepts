@@ -6,9 +6,10 @@ proc show(c: SomeClosure) =
   echo c.rawEnv().repr()
 
 var
-  x = proc(): (void -> void) {.closure.} = (proc {.nimcall.} = discard)
+  x: (void {.closure.} -> (void {.nimcall.} -> void))
   y = (proc {.nimcall.} = discard)
 
+x = proc(): (void {.nimcall.} -> void) {.closure.} = (proc {.nimcall.} = discard)
 show(x)
 
 static: doAssert not compiles(show(y))
